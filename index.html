@@ -3,81 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Professionelle Website</title>
+    <title>JS Projekt Sammlung</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
+            background-color: #0078d7;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav {
+            background-color: #fff;
+            padding: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
             display: flex;
-            justify-content: center;
-            background-color: #444;
+            flex-direction: column;
+            align-items: flex-start;
         }
-        nav a {
-            color: #fff;
-            padding: 1rem;
+        nav ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        nav ul li a {
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin-right: 20px;
         }
-        nav a:hover {
-            background-color: #555;
+        nav ul li a.project {
+            color: #0056b3;
+            border: 1px solid #0056b3;
+        }
+        nav ul li a.project:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        nav ul li a.folder {
+            color: #ffcc00;
+            border: 1px solid #ffcc00;
+        }
+        nav ul li a.folder:hover {
+            background-color: #ffcc00;
+            color: white;
+        }
+        nav ul li a i {
+            margin-right: 10px;
+        }
+        .delete-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .delete-btn:hover {
+            background-color: #cc0000;
         }
         .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        .input-container input {
+            padding: 10px;
+            margin-right: 10px;
+            width: calc(100% - 120px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-container button {
+            padding: 10px 20px;
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .input-container button:hover {
+            background-color: #005bb5;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .button-group button {
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button-group button:hover {
+            background-color: #005bb5;
         }
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
+            background-color: #0078d7;
+            color: white;
+            padding: 10px 0;
             width: 100%;
+            text-align: center;
+            position: fixed;
             bottom: 0;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Willkommen auf meiner Website</h1>
+        <h1>JS Projekt Sammlung</h1>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">Über uns</a>
-        <a href="#services">Dienstleistungen</a>
-        <a href="#contact">Kontakt</a>
-    </nav>
     <div class="container">
-        <section id="home">
-            <h2>Home</h2>
-            <p>Dies ist die Startseite meiner professionellen Website.</p>
-        </section>
-        <section id="about">
-            <h2>Über uns</h2>
-            <p>Hier findest du Informationen über uns.</p>
-        </section>
-        <section id="services">
-            <h2>Dienstleistungen</h2>
-            <p>Wir bieten eine Vielzahl von Dienstleistungen an.</p>
-        </section>
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Kontaktiere uns für weitere Informationen.</p>
-        </section>
+        <div class="button-group">
+            <button id="add-project-btn">Projekt hinzufügen</button>
+            <button id="add-folder-btn">Ordner hinzufügen</button>
+        </div>
+        <div id="input-container" class="input-container hidden">
+            <input type="text" id="folder-path" placeholder="Ordnerpfad eingeben">
+            <button id="add-path-btn">Hinzufügen</button>
+        </div>
     </div>
+    <nav>
+        <ul id="project-list">
+            <!-- Dynamisch hinzugefügte Links erscheinen hier -->
+        </ul>
+    </nav>
     <footer>
-        <p>© 2024 Meine Professionelle Website. Alle Rechte vorbehalten.</p>
+        ©️2024 Valentin Köberl
     </footer>
+
+    <script>
+        document.getElementById('add-project-btn').addEventListener('click', function() {
+            document.getElementById('input-container').classList.remove('hidden');
+            document.getElementById('add-path-btn').dataset.type = 'project';
+        });
+
+        document.getElementById('add-folder-btn').addEventListener('click', function() {
+            document.getElementById('input-container').classList.remove('hidden');
+            document.getElementById('add-path-btn').dataset.type = 'folder';
+        });
+
+        document.getElementById('add-path-btn').addEventListener('click', function() {
+            const folderPath = document.getElementById('folder-path').value;
+            const type = document.getElementById('add-path-btn').dataset.type;
+            if (folderPath) {
+                addProject(folderPath, type);
+                saveProjects();
+                document.getElementById('folder-path').value = '';
+                document.getElementById('input-container').classList.add('hidden');
+            }
+        });
+
+        function addProject(folderPath, type) {
+            const projectList = document.getElementById('project-list');
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            const icon = document.createElement('i');
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.textContent = 'Löschen';
+            deleteBtn.addEventListener('click', function() {
+                projectList.removeChild(listItem);
+                saveProjects();
+            });
+
+            if (type === 'project') {
+                link.href = folderPath + '/index.html';
+                link.textContent = folderPath;
+                link.className = 'project';
+                icon.className = 'fas fa-file-code';
+            } else {
+                link.href = folderPath;
+                link.textContent = folderPath;
+                link.className = 'folder';
+                icon.className = 'fas fa-folder';
+            }
+            link.prepend(icon);
+            listItem.appendChild(link);
+            listItem.appendChild(deleteBtn);
+            projectList.appendChild(listItem);
+        }
+
+        function saveProjects() {
+            const projectList = document.getElementById('project-list');
+            const projects = [];
+            projectList.querySelectorAll('li').forEach(item => {
+                const link = item.querySelector('a');
+                projects.push({ path: link.textContent, type: link.className.includes('project') ? 'project' : 'folder' });
+            });
+            localStorage.setItem('projects', JSON.stringify(projects));
+        }
+
+        function loadProjects() {
+            const projects = JSON.parse(localStorage.getItem('projects')) || [];
+            projects.forEach(project => {
+                addProject(project.path, project.type);
+            });
+        }
+
+        // Projekte beim Laden der Seite wiederherstellen
+        window.onload = loadProjects;
+    </script>
 </body>
 </html>
