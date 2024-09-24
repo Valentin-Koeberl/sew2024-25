@@ -1,5 +1,6 @@
 function convert(amount) {
     let coincounter = {
+        '200' : 0,
         '100': 0,
         '50': 0,
         '20': 0,
@@ -10,7 +11,10 @@ function convert(amount) {
     };
 
     while (amount > 0) {
-        if (amount >= 100) {
+        if (amount >= 200) {
+            amount = amount - 200;
+            coincounter["200"]++;
+        } else if (amount >= 100) {
             amount = amount - 100;
             coincounter["100"]++;
         } else if (amount >= 50) {
