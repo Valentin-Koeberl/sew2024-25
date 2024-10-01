@@ -1,5 +1,5 @@
 function numberMembers(obj) {
-    return  Object.keys(obj).sort(); //Object.keys(obj).length
+    return  Object.keys(obj).length //Object.keys(obj).length
 }
 
 const testObj = {

@@ -6,6 +6,6 @@ const v = {
     }
 }
 
-console.log(v.v().v);
+console.log(v.v());
 
 

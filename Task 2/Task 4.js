@@ -1,7 +1,7 @@
 function equals (obj1, obj2) {
     if (Object.keys(obj1).length === Object.keys(obj2).length) {
-        const arr1 = Object.keys(obj1).slice().sort();
-        const arr2 = Object.keys(obj2).slice().sort();
+        const arr1 = Object.keys(obj1).sort();
+        const arr2 = Object.keys(obj2).sort();
         if (arr1.length !== arr2.length) return false;
         for (let i = 0; i < arr1.length; i++) {
             if (arr1[i] !== arr2[i]) return false;
