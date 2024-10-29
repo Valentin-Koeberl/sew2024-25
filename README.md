@@ -13,8 +13,8 @@ Here is an overview about my work:
 
 - Javascript Basics 🟩
 - Working with Objects 🟩
-- Javascript Modules 🟥
-- Javascript Classes 🟥
+- Javascript Modules 🟩
+- Javascript Classes 🟧
 - Vue App Template 🟥
 - ToDo App 🟥
 - Linting and Debuging in vue.js 🟥
