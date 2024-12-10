@@ -25,13 +25,12 @@ export class Complex {
         this._imaginary = value;
     }
 
-    add(value) {
-        if (typeof value === 'object') {
-            this._real += value.real;
-            this._imaginary += value.imaginary;
-        } else {
-            this._real += value;
-        }
+    add(realvalue, imaginaryvalue = 0) {
+        const temp = new Complex(realvalue, imaginaryvalue);
+
+        this._real = this._real + temp.real;
+        this._imaginary = this._imaginary + temp.imaginary;
+
         return this;
     }
 

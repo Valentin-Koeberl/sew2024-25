@@ -1,13 +1,5 @@
-// colorConverter.js
-
 import { rgbToHex, rgbFunctionToHex, hexToRgb } from '../User Story 1/colorUtils.js';
 
-/**
- * Converts a color in any supported format to the desired output format.
- * @param {string} color - The input color string (e.g., "rgb(255, 255, 255)" or "#ffffff").
- * @param {string} targetFormat - The desired format ("hex", "rgb", or "rgbPercentage").
- * @returns {string} - The converted color string.
- */
 function convertColor(color, targetFormat) {
     if (targetFormat === "hex") {
         if (color.startsWith("rgb(")) {

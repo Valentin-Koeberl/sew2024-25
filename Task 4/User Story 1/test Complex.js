@@ -16,6 +16,7 @@ console.log("c3:", c3.toString()); // Expected output: "2+5i"
 
 // Test case: Adding complex numbers
 c3.add(new Complex(-1, -5));
+c3.add(3, 2).add(c1);
 console.log("c3 after addition:", c3.toString()); // Expected output: "1+0i"
 
 // Test case: Equality check

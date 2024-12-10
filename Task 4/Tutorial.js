@@ -20,4 +20,4 @@ const person1 = new Person('Alice', 30, '1234');
 console.log(person1.name); // Outputs: Alice
 console.log(person1.getId()); // Outputs: 1234
 person1.greet(); // Outputs: Hello, my name is Alice and I am 30 years old.
-// console.log(person1.#id); // Error: Private field '#id' must be declared in an enclosing class
+ console.log(person1.#id); // Error: Private field '#id' must be declared in an enclosing class
