@@ -1,7 +1,7 @@
 <script setup>
-import RegistrationForm from './components/RegistrationForum.vue';
+import RegistrationFormNeu from './components/RegistrationsForumNeu.vue';
 </script>
 
 <template>
-  <RegistrationForm />
+  <RegistrationFormNeu />
 </template>

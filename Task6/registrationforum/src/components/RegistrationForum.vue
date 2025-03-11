@@ -42,9 +42,14 @@ const phoneNumberValidator = helpers.withMessage(
     }
 );
 
+const onlyLetters = helpers.withMessage(
+    'Der Inhalt darf nur Buchstaben enthalten.',
+    value => /^[a-zA-Z]+$/.test(value)
+);
+
 const rules = {
-  firstname: { required },
-  lastname: { required },
+  firstname: { required, onlyLetters },
+  lastname: { required, onlyLetters },
   email: { required, email },
   birthday: { required },
   phone: {
