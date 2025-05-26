@@ -58,7 +58,6 @@ export default {
   created() {
     this.debouncedSearch = debounce(this.searchRecipes, 500);
     
-    // Restore search state from sessionStorage
     const savedSearch = sessionStorage.getItem('recipeSearch');
     if (savedSearch) {
       const { searchTerm, recipes } = JSON.parse(savedSearch);
@@ -91,7 +90,6 @@ export default {
         );
         this.recipes = response.data.results;
         
-        // Save search state to sessionStorage
         sessionStorage.setItem('recipeSearch', JSON.stringify({
           searchTerm: this.searchTerm,
           recipes: this.recipes

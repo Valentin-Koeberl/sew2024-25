@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 
 export const useProductStore = defineStore('tinyStore', {
   state: () => {
-    // Load products from localStorage or use default if none exist
     const savedProducts = localStorage.getItem('products')
     return {
       products: savedProducts ? JSON.parse(savedProducts) : [

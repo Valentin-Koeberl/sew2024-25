@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <router-link to="/legal">Legal Notice (Impressum)</router-link>
+    <RouterLink to="/legal">Legal Notice (Impressum)</RouterLink>
   </footer>
 </template>
 
