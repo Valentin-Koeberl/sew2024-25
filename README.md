@@ -15,17 +15,17 @@ Here is an overview about my work:
 - Working with Objects 🟩
 - Javascript Modules 🟩
 - Javascript Classes 🟩
-- Vue App Template 🟥
-- ToDo App 🟥
-- Linting and Debuging in vue.js 🟥
-- ToDo App extended 🟥
-- Registrationform 🟥
-- IP Adress Lookup 🟥
-- Recipe Search 🟥
-- Webshop 🟥
-- vue.js Commponent testing 🟥
-- vue.js Ecosystem 🟥
-- i18n for vue.js Project 🟥
+- Vue App Template 🟩
+- ToDo App 🟩
+- Linting and Debuging in vue.js 🟧
+- ToDo App extended 🟩
+- Registrationform 🟩
+- IP Adress Lookup 🟩
+- Recipe Search 🟩
+- Webshop 🟩
+- vue.js Commponent testing 🟩
+- vue.js Ecosystem 🟩
+- i18n for vue.js Project 🟩
 - Individual vue.js Project 🟥
 
 
